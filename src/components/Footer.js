@@ -20,16 +20,9 @@ function Footer() {
         >
           <BsGithub />
         </a>
+
         <a
-          href="https://twitter.com/Riteshk_007"
-          target="_blank"
-          rel="noreferrer"
-          className="text-white"
-        >
-          <RiTwitterXFill />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/ritesh-kumar-8064b626b"
+          href="https://www.linkedin.com/in/aidan-lozell-a67a29314/"
           target="_blank"
           rel="noreferrer"
           className="text-white"

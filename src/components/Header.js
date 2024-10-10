@@ -31,7 +31,7 @@ function Header() {
     <div
       className={
         scroll
-          ? "flex items-center justify-between px-4 z-50 bg-purple-950 bg-opacity-20 backdrop-blur-lg rounded drop-shadow-lg shadow-lg relative lg:sticky top-0"
+          ? "flex items-center justify-between px-4 z-50 bg-blue-50 bg-opacity-20 backdrop-blur-lg rounded drop-shadow-lg shadow-lg relative lg:sticky top-0"
           : "flex items-center justify-between px-4 z-50  relative lg:sticky top-0"
       }
     >
