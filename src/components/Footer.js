@@ -8,14 +8,12 @@ function Footer() {
   return (
     <div className="flex items-center justify-evenly bg-[#0F0416] text-white flex-wrap px-3 py-4">
       <p className="text-sm text-center m-2">
-        Designed and Developed by Ritesh
+        Designed and Developed by Aidan Lozell
       </p>
-      <p className="text-sm font-semibold text-center m-2">
-        Copyright © 2024 Ritesh.dev
-      </p>
+      
       <span className="flex items-center justify-center gap-7 m-2">
         <a
-          href="https://github.com/riteshk-007"
+          href="https://github.com/Lozie2002"
           target="_blank"
           rel="noreferrer"
           className="text-white"

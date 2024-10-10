@@ -18,3 +18,12 @@ body::-webkit-scrollbar-thumb {
  background: transparent !important;
  display: none !important;
 }
+/* This will ensure the default cursor is used for all elements */
+body {
+  cursor: default; /* Use default cursor */
+}
+
+/* You can customize specific elements if needed */
+.some-class {
+  cursor: pointer; /* For clickable elements */
+}
