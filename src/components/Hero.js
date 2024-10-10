@@ -1,5 +1,4 @@
 import React from "react";
-import Type from "./Type";
 
 function Hero() {
   return (
