@@ -3,19 +3,18 @@ import { Link, useNavigate } from "react-router-dom";
 import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
-  AiFillStar,
 } from "react-icons/ai";
 import { FiUser, FiFileText } from "react-icons/fi";
-import { DiGitBranch } from "react-icons/di";
 import { RiMenu3Fill } from "react-icons/ri";
 import { MdClose } from "react-icons/md";
 import MobileNav from "./MobileNav";
+import logo from "../photos/logo.png"; // Importing the logo image
 
 function Header() {
   const navigate = useNavigate();
   const [showNav, setShowNav] = useState(false);
   const [scroll, setScrolled] = useState(false);
-  const name = ["{ Ritesh }"];
+
   const handleScroll = () => {
     const offset = window.scrollY;
     if (offset > 50) {
@@ -24,25 +23,30 @@ function Header() {
       setScrolled(false);
     }
   };
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
   }, []);
+
   return (
     <div
       className={
         scroll
-          ? "flex items-center justify-between px-4 z-50 bg-blue-50 bg-opacity-20 backdrop-blur-lg rounded drop-shadow-lg shadow-lg relative lg:sticky top-0"
-          : "flex items-center justify-between px-4 z-50  relative lg:sticky top-0"
+          ? "flex items-center justify-between px-4 z-50 bg-black bg-opacity-80 backdrop-blur-lg rounded drop-shadow-lg shadow-lg relative lg:sticky top-0"
+          : "flex items-center justify-between px-4 z-50 bg-black bg-opacity-80 relative lg:sticky top-0"
       }
     >
-      <span className="capitalize md:w-1/3 lg:w-1/2 flex items-center justify-center py-5 px-2 relative">
-        <h1
-          className="cursor-pointer text-xl lg:text-3xl font-bold bg-gradient-to-r from-gray-50 to-blue-100 bg-clip-text text-transparent uppercase"
-          onClick={() => navigate("/")}
-        >
-          {name}
-        </h1>
+      {/* Replacing name with logo */}
+      <span className="md:w-1/3 lg:w-1/2 flex items-center justify-center py-5 px-2 relative">
+        <img
+          src={logo}
+          alt="Logo"
+          className="cursor-pointer w-30 h-16"
+          onClick={() => navigate("/")} // Navigate to the homepage on click
+        />
       </span>
+
+      {/* Desktop navigation links */}
       <div className="w-2/3 hidden lg:flex items-center justify-start text-white">
         <ul className="flex gap-8 lg:gap-12">
           <li className="relative group">
@@ -82,17 +86,9 @@ function Header() {
             </Link>
           </li>
         </ul>
-
-        <a
-          href="https://github.com/riteshk-007/portfolio"
-          target="_blank"
-          rel="noreferrer"
-          className="flex mx-10 gap-2 text-lg bg-purple-900 px-5 py-[5px] border border-purple-700 rounded-sm hover:bg-purple-800 transition-all duration-200 hover:-translate-y-[2px]"
-        >
-          <DiGitBranch fontSize={20} />
-          <AiFillStar fontSize={20} />
-        </a>
       </div>
+
+      {/* Mobile navigation toggle */}
       <span>
         <div className="h-full lg:hidden flex items-center justify-center cursor-pointer relative">
           {showNav ? (
