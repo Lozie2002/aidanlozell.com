@@ -29,7 +29,7 @@ function Footer() {
           <FaLinkedinIn />
         </a>
         <a
-          href="https://www.instagram.com/riteshk_007/?igshid=MzNlNGNkZWQ4Mg%3D%3D"
+          href="https://www.instagram.com/aidan_lozell/"
           target="_blank"
           rel="noreferrer"
           className="text-white"

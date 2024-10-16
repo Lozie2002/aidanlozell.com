@@ -1,14 +1,16 @@
 import React from "react";
+import aidan2 from "../../photos/aidan2.jpg"; // Adjust the path based on your folder structure
 
-function Interduce() {
+function Introduction() {
   return (
-    <div className="flex flex-wrap items-center justify-center flex-col lg:flex-row relative overflow-hidden bg-blue-600">
+    <div className="bg-gradient-to-r from-gray-900 via-gray-800 to-black flex flex-wrap items-center justify-center flex-col lg:flex-row relative overflow-hidden">
+      {/* Text Section */}
       <div className="w-full lg:w-1/2 h-1/2 lg:h-full flex items-center justify-center flex-col my-10 lg:gap-10">
-        <h1 className="flex text-white text-2xl lg:text-4xl gap-2 my-10">
+        <h1 className="text-teal-400 text-2xl lg:text-4xl my-10">
           LET ME INTRODUCE MYSELF
         </h1>
-        <div className="flex items-center m-auto justify-center w-11/12 lg:w-3/4 lg:mr-10">
-          <span className="flex flex-col gap-3 text-white items-start text-base justify-center font-semibold lg:text-lg">
+        <div className="flex items-center justify-center w-11/12 lg:w-3/4 lg:mr-10">
+          <span className="flex flex-col gap-3 text-gray-300 text-base font-semibold lg:text-lg">
             <p>
               I’m Aidan Lozell, a recent graduate with a degree in Computer Science, majoring in Cyber Security. 
               Throughout my studies, I built a strong foundation in areas like information security, threat analysis, and network protection. 
@@ -20,11 +22,17 @@ function Interduce() {
           </span>
         </div>
       </div>
+
+      {/* Image Section */}
       <div className="w-full lg:w-1/2 h-full flex items-center justify-center p-10">
-        {/* You can add more content or an image here */}
+        <img
+          src={aidan2} // Use the imported image
+          alt="Aidan Lozell"
+          className="w-full h-auto max-w-sm lg:max-w-md rounded-lg shadow-2xl border-4 border-teal-400"
+        />
       </div>
     </div>
   );
 }
 
-export default Interduce;
+export default Introduction;

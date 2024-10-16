@@ -1,12 +1,12 @@
 import React from "react";
-import Hero from "../components/Hero";
-import Interduce from "../components/Interduce";
+import TitlePage from "../components/Home/titlePage";
+import Introduction from "../components/Home/Introduction";
 
 function Home() {
   return (
     <div>
-      <Hero />
-      <Interduce />
+      <TitlePage />
+      <Introduction />
     </div>
   );
 }
