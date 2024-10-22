@@ -1,5 +1,5 @@
 import React from "react";
-import aidan2 from "../../photos/aidan2.jpg"; // Adjust the path based on your folder structure
+import aidanTradeShow from "../../photos/aidanTradeShow.jpg"; // Adjust the path based on your folder structure
 
 function Introduction() {
   return (
@@ -24,9 +24,9 @@ function Introduction() {
       {/* Image Section */}
       <div className="w-full lg:w-1/2 flex items-center justify-center p-5">
         <img
-          src={aidan2} // Use the imported image
+          src={aidanTradeShow} // Use the imported image
           alt="Aidan Lozell"
-          className="w-full h-auto max-w-xs lg:max-w-md rounded-lg shadow-2xl border-4 border-teal-400"
+          className="w-full h-auto max-w-lg lg:max-w-xl rounded-lg shadow-2xl border-4 border-teal-400"
         />
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import headShot from "../../photos/headshot.jpg";
-import { FaGithub, FaLinkedin, FaInstagram, FaFacebook } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram, FaFacebook, FaMapMarkerAlt } from 'react-icons/fa';
 import backgroundImage from "../../photos/background.webp"; // Update this with the correct path
 
 function TitlePage() {
@@ -22,6 +22,10 @@ function TitlePage() {
           <p className="text-white text-base lg:text-lg font-thin">
             A Computer Science Graduate, <br /> Obsessed with all things Cybersecurity, and a passion for programming.
           </p>
+          <div className="flex items-center text-white text-lg mt-0">
+            <FaMapMarkerAlt className="mr-2" />
+            <span>Sydney</span>
+          </div>
           {/* Social Media Icons */}
           <div className="flex gap-4 mt-6 justify-center">
             <a href="https://github.com/Lozie2002" target="_blank" rel="noopener noreferrer">
@@ -37,6 +41,8 @@ function TitlePage() {
               <FaFacebook className="text-white text-2xl hover:text-gray-300" />
             </a>
           </div>
+          {/* Location */}
+       
         </div>
       </div>
 
