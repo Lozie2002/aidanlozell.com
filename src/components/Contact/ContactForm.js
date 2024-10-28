@@ -23,15 +23,15 @@ function ContactForm() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-blue-900 to-black flex flex-col lg:flex-row items-center justify-center relative overflow-hidden p-2"> {/* Reduced padding */}
+    <div className="min-h-screen bg-white flex flex-col lg:flex-row items-center justify-center relative overflow-hidden p-8">
       {/* Form Section */}
-      <div className="w-full lg:w-1/2 flex flex-col items-start justify-center lg:items-center my-2 lg:gap-10"> {/* Reduced margins */}
-        <h1 className="text-teal-400 text-3xl lg:text-4xl my-3 text-center"> {/* Adjusted margin */}
+      <div className="w-full lg:w-1/2 flex flex-col items-start justify-center lg:items-center my-2 lg:gap-10">
+        <h1 className="text-customColor text-5xl font-extrabold my-5 text-center"> {/* Increased font size and weight */}
           CONTACT ME
         </h1>
         <form className="w-full lg:w-3/4" onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label className="text-gray-300 font-semibold" htmlFor="name">
+          <div className="mb-5">
+            <label className="text-black text-lg font-semibold" htmlFor="name"> {/* Increased label font size */}
               Name:
             </label>
             <input
@@ -41,11 +41,11 @@ function ContactForm() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full p-2 mt-2 rounded bg-gray-700 text-gray-300 border border-teal-400"
+              className="w-full p-3 mt-2 rounded bg-gray-200 text-customColor border border-customColor text-lg" 
             />
           </div>
-          <div className="mb-4">
-            <label className="text-gray-300 font-semibold" htmlFor="email">
+          <div className="mb-5">
+            <label className="text-black text-lg font-semibold" htmlFor="email"> {/* Increased label font size */}
               Email:
             </label>
             <input
@@ -55,11 +55,11 @@ function ContactForm() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full p-2 mt-2 rounded bg-gray-700 text-gray-300 border border-teal-400"
+              className="w-full p-3 mt-2 rounded bg-gray-200 text-customColor border border-customColor text-lg" 
             />
           </div>
-          <div className="mb-4">
-            <label className="text-gray-300 font-semibold" htmlFor="message">
+          <div className="mb-5">
+            <label className="text-black text-lg font-semibold" htmlFor="message"> {/* Increased label font size */}
               Message:
             </label>
             <textarea
@@ -69,12 +69,12 @@ function ContactForm() {
               onChange={handleChange}
               required
               rows="4"
-              className="w-full p-2 mt-2 rounded bg-gray-700 text-gray-300 border border-teal-400"
+              className="w-full p-3 mt-2 rounded bg-gray-200 text-customColor border border-customColor text-lg" 
             ></textarea>
           </div>
           <button
             type="submit"
-            className="w-full bg-teal-500 hover:bg-teal-600 text-white font-semibold py-2 rounded"
+            className="w-full bg-customColor hover:bg-black text-white font-bold py-3 rounded text-lg transition duration-300"
           >
             Send Message
           </button>
@@ -86,7 +86,7 @@ function ContactForm() {
         <img
           src={aidanTradeShow} // Use the imported image
           alt="Aidan Lozell"
-          className="w-full h-auto max-w-lg lg:max-w-xl rounded-lg shadow-2xl border-4 border-teal-400"
+          className="w-full h-auto max-w-lg lg:max-w-xl rounded-lg shadow-2xl border-4 border-customColor"
         />
       </div>
     </div>

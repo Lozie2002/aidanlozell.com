@@ -27,25 +27,29 @@ function Techstack() {
   let shuffledData = shuffleArray(data);
 
   return (
-    <div className="bg-gradient-to-r from-blue-900 to-black py-10 w-full flex flex-col items-center">
-      <h1 className="m-auto flex items-center w-full justify-center gap-2 text-gray-200 font-medium text-4xl my-3">
-        Professional Skillset 
+    <div className="bg-white py-10 w-full flex flex-col items-center">
+      <h1 className="m-auto flex items-center w-full justify-center gap-2 text-customColor font-bold text-5xl my-3">
+        Professional Skillset
       </h1>
-      <p className="text-gray-300 mb-6 text-center w-11/12 lg:w-4/5">
+      <p className="text-black mb-6 text-center w-11/12 lg:w-4/5 text-lg lg:text-xl font-normal leading-relaxed">
         Here are the technologies and tools I work with, showcasing my skills and experience.
       </p>
       <div className="flex items-center justify-center gap-5 flex-wrap w-full lg:w-4/5 mx-auto">
         {shuffledData.map((item, i) => (
           <div
-            className="relative w-36 md:w-60 h-36 flex items-center justify-center m-3 bg-black z-20 rounded-lg hover:border-teal-400 hover:scale-[1.1] transition-transform duration-300 ease-in-out group shadow-2xl"
+            className="relative w-36 md:w-60 h-36 flex items-center justify-center m-3 bg-black z-20 rounded-lg hover:border-customColor hover:scale-[1.1] transition-transform duration-300 ease-in-out group shadow-2xl"
             key={i}
           >
             <div className="transition-transform duration-300 ease-in-out group-hover:rotate-[15deg]">
               {item.icon}
             </div>
-            <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-2 text-white opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
+            <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-2 text-black opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
               {item.name}
             </span>
+            <div className="absolute inset-0 rounded-lg shadow-[0_0_15px_5px_rgba(0,123,255,0.5)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"></div> {/* Blue glow effect */}
+            <span className="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-white opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
+              {item.name}
+            </span> {/* Hover text */}
           </div>
         ))}
       </div>
