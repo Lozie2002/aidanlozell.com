@@ -29,7 +29,7 @@ function Resume() {
     <div
       className="flex items-center justify-center flex-col relative"
       style={{
-        background: "linear-gradient(to right, #1e3c72, #000000)", // Blue to black gradient
+        background: "white", // Blue to black gradient
         minHeight: "100vh", // Ensure it covers the full viewport height
       }}
     >
@@ -38,24 +38,25 @@ function Resume() {
         href={resumeFile}
         target="_blank"
         rel="noreferrer"
-        className="flex items-center z-20 justify-center gap-3 px-6 py-2 rounded shadow-md text-white bg-blue-600 hover:bg-green-700 transition duration-300 ease-in-out my-3"
+        className="flex items-center z-20 justify-center gap-3 px-8 py-3 rounded shadow-lg hover:shadow-xl text-white bg-customColor hover:bg-black transition duration-300 ease-in-out my-6 text-lg font-semibold" // Increased shadow effect on hover
         initial="initial"
         animate="animate"
         variants={fadeIn}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <BiDownload fontSize={20} /> Download CV
+        <BiDownload fontSize={24} /> {/* Increased icon size */}
+        Download CV
       </motion.a>
 
       {/* Animated PDF Document */}
       <motion.div
-        className="py-[50px] justify-center flex items-center overflow-hidden z-20"
+        className="py-12 justify-center flex items-center overflow-hidden z-20 shadow-2xl rounded-lg" // Added more shadow and rounded corners
         initial="initial"
         animate="animate"
         variants={slideIn}
         transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
       >
-        <Document file={resumeFile} className="flex justify-center shadow-xl">
+        <Document file={resumeFile} className="flex justify-center shadow-xl rounded-lg">
           <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
         </Document>
       </motion.div>
