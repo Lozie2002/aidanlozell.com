@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion"; // Import Framer Motion
 import TitlePage from "../components/Home/titlePage";
 import Introduction from "../components/Home/Introduction";
-import Instagram from "../components/Home/Instagram";
+//import Instagram from "../components/Home/Instagram";
 
 function Home() {
   // Define animation variants
