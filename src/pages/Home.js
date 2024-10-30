@@ -32,6 +32,7 @@ function Home() {
       >
         <Introduction />
       </motion.div>
+    {/* Animated Instagram 
       <motion.div
         initial="initial"
         animate="animate"
@@ -40,6 +41,7 @@ function Home() {
       >
         <Instagram />
       </motion.div>
+      */}
     </div>
   );
 }
