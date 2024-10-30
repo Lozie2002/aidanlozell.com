@@ -1,17 +1,22 @@
 import React, { useEffect, useState } from "react";
-import { FaInstagram } from "react-icons/fa"; // Import Instagram icon
+import { FaInstagram } from "react-icons/fa";
 
 function Introduction() {
   const [media, setMedia] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
-      const url = 'https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=IGQWRQTm4zMWs1Q2gtbkNvdURnVFpSME4wc1A5T051RWE3UGVaSjg3S04wS051cVd3enc4VVBuY1ZAXTHJPcXBsTHd0MXZAQSDVhQzNwVTJraGZAPdUhQUGZAHbFVtbFN5TmVOcThiaWhGMjZAocnVoMkZA5NmRHaGVtUEEZD';
+      const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.REACT_APP_INSTAGRAM_ACCESS_TOKEN}`;
 
       try {
         const response = await fetch(url);
+        if (!response.ok) {
+          const errorText = await response.text();
+          console.error("Error fetching data:", errorText);
+          return; // Exit if there's an error
+        }
         const data = await response.json();
-        setMedia(data.data); // Set media from fetched data
+        setMedia(data.data);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -34,7 +39,7 @@ function Introduction() {
             <div key={item.id} className="relative m-2 p-2 rounded-lg shadow-lg bg-gray-100">
               <img
                 src={item.media_url}
-                alt={item.caption || "Instagram Media"} // Added meaningful alt text
+                alt={item.caption || "Instagram Media"}
                 className="w-full h-48 object-cover rounded-lg"
               />
               <div className="absolute inset-0 flex items-center justify-center rounded-lg bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
@@ -49,7 +54,7 @@ function Introduction() {
         {/* Follow Me Section */}
         <div className="mt-10 w-full">
           <p className="text-lg text-black font-semibold flex items-center">
-            <FaInstagram className="text-2xl mr-2" /> {/* Instagram logo */}
+            <FaInstagram className="text-2xl mr-2" />
             Follow me on Instagram: 
             <a 
               href="https://instagram.com/Aidan_lozell" 
