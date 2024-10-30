@@ -10,7 +10,7 @@ function Project() {
     animate: { opacity: 1, y: 0 },
   };
 
-  const [projectRef, projectInView] = useInView({ triggerOnce: true, threshold: 0.1 });
+  const [projectInView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
     <div className="bg-white flex flex-col items-center justify-center relative overflow-hidden px-10 py-8">
