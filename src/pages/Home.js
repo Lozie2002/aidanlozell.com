@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion"; // Import Framer Motion
 import TitlePage from "../components/Home/titlePage";
 import Introduction from "../components/Home/Introduction";
+import Instagram from "../components/Home/Instagram";
 
 function Home() {
   // Define animation variants
@@ -30,6 +31,14 @@ function Home() {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }} // Slight delay for introduction
       >
         <Introduction />
+      </motion.div>
+      <motion.div
+        initial="initial"
+        animate="animate"
+        variants={fadeIn}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }} // Slight delay for introduction
+      >
+        <Instagram />
       </motion.div>
     </div>
   );

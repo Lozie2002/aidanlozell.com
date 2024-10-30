@@ -14,16 +14,9 @@ function Project() {
 
   return (
     <div className="bg-white flex flex-col items-center justify-center relative overflow-hidden px-10 py-8">
-      <motion.h1
-        ref={projectRef}
-        initial="initial"
-        animate={projectInView ? "animate" : "initial"}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        variants={fadeInUp}
-        className="text-4xl font-semibold text-customColor mb-2" // Adjusted margin for spacing
-      >
+        <h1 className="text-5xl lg:text-7xl font-extrabold text-customColor leading-tight mb-4 text-left"> {/* Center header text */}
         My Projects
-      </motion.h1>
+        </h1>
 
       {/* Paragraph under the h1 */}
       <p className="text-lg text-black mb-6 text-left max-w-3xl">

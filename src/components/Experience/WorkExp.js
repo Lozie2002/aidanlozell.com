@@ -9,7 +9,9 @@ function WorkAndEducation() {
     <div className="p-8 bg-white text-blue-400 font-sans">
       {/* Work Experience Section */}
       <div className="pr-4">
-        <h2 className="text-4xl font-bold mb-6">WORK EXPERIENCE</h2>
+      <h1 className="text-5xl lg:text-7xl font-extrabold text-customColor leading-tight mb-4 text-left"> {/* Center header text */}
+         Work Experience
+        </h1>
 
         {/* iAccelerate Internship */}
         <div className="mb-8 flex items-start">
@@ -73,8 +75,9 @@ function WorkAndEducation() {
 
       {/* Education Section */}
       <div className="pl-4">
-        <h2 className="text-4xl font-bold mb-6">EDUCATION</h2>
-
+      <h1 className="text-5xl lg:text-7xl font-extrabold text-customColor leading-tight mb-4 text-left"> {/* Center header text */}
+         Education
+        </h1>
         {/* University of Wollongong */}
         <div className="mb-8 flex items-start">
           <div className="w-1/5 text-black font-bold"> {/* Date on the left */}
