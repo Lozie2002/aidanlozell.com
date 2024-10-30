@@ -25,7 +25,7 @@ function Introduction() {
       {/* Text Section */}
       <div className="w-full lg:w-1/2 flex flex-col items-start justify-center my-5 lg:gap-10">
         <h1 className="text-5xl lg:text-7xl font-extrabold text-customColor leading-tight">
-          My Instagram Feed!
+          My Instagram Feed
         </h1>
         
         {/* Media Section */}
