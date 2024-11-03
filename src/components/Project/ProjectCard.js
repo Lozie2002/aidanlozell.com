@@ -33,7 +33,7 @@ function ProjectCard({ name, about, image, demo, code, tags }) {
             {demo && (
               <a href={demo} target="_blank" rel="noreferrer">
                 <button className="inline-flex text-white bg-customColor border-0 py-2 px-5 focus:outline-none font-medium items-center justify-center gap-1 hover:bg-customColor rounded text-lg">
-                  Demo <BiLinkExternal />
+                  See More <BiLinkExternal />
                 </button>
               </a>
             )}

@@ -14,9 +14,9 @@ function Project() {
 
   return (
     <div className="bg-white flex flex-col items-center justify-center relative overflow-hidden px-10 py-8">
-        <h1 className="text-5xl lg:text-7xl font-extrabold text-customColor leading-tight mb-4 text-left"> {/* Center header text */}
+      <h1 className="text-5xl lg:text-7xl font-extrabold text-customColor leading-tight mb-4 text-left">
         My Projects
-        </h1>
+      </h1>
 
       {/* Paragraph under the h1 */}
       <p className="text-lg text-black mb-6 text-left max-w-3xl">
@@ -88,6 +88,7 @@ function Project() {
               demo={project.demo}
               code={project.code}
               tags={project.tags}
+              demoText="See More" // Change demo text to "See More"
               className="font-sans"
             />
           </motion.div>

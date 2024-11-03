@@ -27,8 +27,8 @@ function Techstack() {
   let shuffledData = shuffleArray(data);
 
   return (
-    <div className="bg-white py-10 w-full flex flex-col items-center">
-      <h1 className="m-auto flex items-center w-full justify-center gap-2 text-customColor font-bold text-5xl my-3">
+    <div className="bg-customColor py-10 w-full flex flex-col items-center">
+      <h1 className="m-auto flex items-center w-full justify-center gap-2 text-white font-bold text-5xl my-3">
         Professional Skillset
       </h1>
       <p className="text-black mb-6 text-center w-11/12 lg:w-4/5 text-lg lg:text-xl font-normal leading-relaxed">

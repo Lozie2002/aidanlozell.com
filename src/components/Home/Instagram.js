@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa"; // Import Instagram icon
 
 function Introduction() {
   const [media, setMedia] = useState([]);
@@ -11,12 +11,20 @@ function Introduction() {
       try {
         const response = await fetch(url);
         if (!response.ok) {
-          const errorText = await response.text();
-          console.error("Error fetching data:", errorText);
-          return; // Exit if there's an error
+          throw new Error(`HTTP error! Status: ${response.status}`);
         }
         const data = await response.json();
-        setMedia(data.data);
+        
+        // Log the entire data object for better debugging
+        console.log("API response data:", data);
+        
+        // Check if data exists and if it has media items
+        if (data.data) {
+          setMedia(data.data);
+        } else {
+          console.warn("No media found in the response.");
+          setMedia([]);
+        }
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -26,35 +34,39 @@ function Introduction() {
   }, []);
 
   return (
-    <div className="bg-white flex flex-col lg:flex-row items-start justify-center relative overflow-hidden p-4">
+    <div className="bg-customColor flex flex-col lg:flex-row items-start justify-center relative overflow-hidden p-4">
       {/* Text Section */}
       <div className="w-full lg:w-1/2 flex flex-col items-start justify-center my-5 lg:gap-10">
-        <h1 className="text-5xl lg:text-7xl font-extrabold text-customColor leading-tight">
+        <h1 className="text-5xl lg:text-7xl font-extrabold text-white leading-tight">
           My Instagram Feed
         </h1>
         
         {/* Media Section */}
         <div className="grid grid-cols-3 gap-4">
-          {media.slice(0, 9).map(item => (
-            <div key={item.id} className="relative m-2 p-2 rounded-lg shadow-lg bg-gray-100">
-              <img
-                src={item.media_url}
-                alt={item.caption || "Instagram Media"}
-                className="w-full h-48 object-cover rounded-lg"
-              />
-              <div className="absolute inset-0 flex items-center justify-center rounded-lg bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                <span className="text-white text-sm text-center">
-                  {item.caption || "No caption"}
-                </span>
+          {Array.isArray(media) && media.length > 0 ? (
+            media.slice(0, 9).map(item => (
+              <div key={item.id} className="relative m-2 p-2 rounded-lg shadow-lg bg-gray-100">
+                <img
+                  src={item.media_url}
+                  alt={item.caption || "Instagram Media"} // Added meaningful alt text
+                  className="w-full h-48 object-cover rounded-lg"
+                />
+                <div className="absolute inset-0 flex items-center justify-center rounded-lg bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                  <span className="text-white text-sm text-center">
+                    {item.caption || "No caption"}
+                  </span>
+                </div>
               </div>
-            </div>
-          ))}
+            ))
+          ) : (
+            <p>No media available</p> // Display a message if there are no media items
+          )}
         </div>
 
         {/* Follow Me Section */}
         <div className="mt-10 w-full">
           <p className="text-lg text-black font-semibold flex items-center">
-            <FaInstagram className="text-2xl mr-2" />
+            <FaInstagram className="text-2xl mr-2" /> {/* Instagram logo */}
             Follow me on Instagram: 
             <a 
               href="https://instagram.com/Aidan_lozell" 

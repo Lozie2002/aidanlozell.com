@@ -27,9 +27,9 @@ function Resume() {
 
   return (
     <div
-      className="flex items-center justify-center flex-col relative"
+      className="flex items-center justify-center flex-col relative bg-customColor"
       style={{
-        background: "white", // Blue to black gradient
+       
         minHeight: "100vh", // Ensure it covers the full viewport height
       }}
     >
@@ -38,7 +38,7 @@ function Resume() {
         href={resumeFile}
         target="_blank"
         rel="noreferrer"
-        className="flex items-center z-20 justify-center gap-3 px-8 py-3 rounded shadow-lg hover:shadow-xl text-white bg-customColor hover:bg-black transition duration-300 ease-in-out my-6 text-lg font-semibold" // Increased shadow effect on hover
+        className="flex items-center z-20 justify-center gap-3 px-8 py-3 rounded shadow-lg hover:shadow-xl text-black bg-white hover:bg-green transition duration-300 ease-in-out my-6 text-lg font-semibold" // Increased shadow effect on hover
         initial="initial"
         animate="animate"
         variants={fadeIn}

@@ -12,7 +12,7 @@ function MobileNav({ showNav, setShowNav }) {
       className={`fixed w-full top-[100px] left-0 z-50 transition-all duration-500 ${
         showNav
           ? "h-1/2 bg-black rounded-b-md border-2 border-t-0 border-black scale-y-100"
-          : "h-0 bg-gradient-to-r from-blue-900 to-black rounded-b-md scale-y-0"
+          : "h-0 bg-black rounded-b-md scale-y-0"
       }`}
     >
       <div className="flex flex-col items-center justify-center text-white">
