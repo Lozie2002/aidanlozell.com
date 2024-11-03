@@ -1,10 +1,12 @@
 import React from "react";
 import aidanTradeShow from "../../photos/aidanTradeShow.jpg"; // Adjust the path based on your folder structure
+import { color } from "framer-motion";
 
 function Introduction() {
   return (
-    <div className="bg-white flex flex-col items-center justify-center relative overflow-hidden p-4 min-h-screen">
-      {/* Responsive layout wrapper for text and image */}
+<div className="flex flex-col items-center justify-center relative overflow-hidden p-4 min-h-screen"
+style={{backgroundColor: "White"}}>
+{/* Responsive layout wrapper for text and image */}
       <div className="flex flex-col lg:flex-row items-center justify-center w-full gap-5 px-4 lg:px-10">
         
         {/* Text Section */}

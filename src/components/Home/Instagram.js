@@ -37,36 +37,36 @@ function Introduction() {
     <div className="bg-customColor flex flex-col lg:flex-row items-start justify-center relative overflow-hidden p-4">
       {/* Text Section */}
       <div className="w-full lg:w-1/2 flex flex-col items-start justify-center my-5 lg:gap-10">
-        <h1 className="text-5xl lg:text-7xl font-extrabold text-white leading-tight">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-tight mb-6">
           My Instagram Feed
         </h1>
         
         {/* Media Section */}
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-4 w-full">
           {Array.isArray(media) && media.length > 0 ? (
             media.slice(0, 9).map(item => (
-              <div key={item.id} className="relative m-2 p-2 rounded-lg shadow-lg bg-gray-100">
+              <div key={item.id} className="relative rounded-lg shadow-lg bg-gray-100 overflow-hidden">
                 <img
                   src={item.media_url}
                   alt={item.caption || "Instagram Media"} // Added meaningful alt text
-                  className="w-full h-48 object-cover rounded-lg"
+                  className="w-full h-32 sm:h-48 object-cover"
                 />
-                <div className="absolute inset-0 flex items-center justify-center rounded-lg bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-white text-sm text-center">
+                <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                  <span className="text-white text-xs sm:text-sm text-center px-2">
                     {item.caption || "No caption"}
                   </span>
                 </div>
               </div>
             ))
           ) : (
-            <p>No media available</p> // Display a message if there are no media items
+            <p className="text-center col-span-full">No media available</p> // Display a message if there are no media items
           )}
         </div>
 
         {/* Follow Me Section */}
         <div className="mt-10 w-full">
-          <p className="text-lg text-black font-semibold flex items-center">
-            <FaInstagram className="text-2xl mr-2" /> {/* Instagram logo */}
+          <p className="text-md sm:text-lg text-black font-semibold flex items-center">
+            <FaInstagram className="text-xl sm:text-2xl mr-2" /> {/* Instagram logo */}
             Follow me on Instagram: 
             <a 
               href="https://instagram.com/Aidan_lozell" 
