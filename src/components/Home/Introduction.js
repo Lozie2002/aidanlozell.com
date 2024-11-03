@@ -1,6 +1,5 @@
 import React from "react";
 import aidanTradeShow from "../../photos/aidanTradeShow.jpg"; // Adjust the path based on your folder structure
-import { color } from "framer-motion";
 
 function Introduction() {
   return (
