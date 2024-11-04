@@ -3,8 +3,8 @@ import aidanTradeShow from "../../photos/aidanTradeShow.jpg"; // Adjust the path
 
 function Introduction() {
   return (
-<div className="flex flex-col items-center justify-center relative overflow-hidden p-4 min-h-screen"
-style={{backgroundColor: "White"}}>
+    <div className="bg-white h-auto lg:h-[70vh] flex flex-wrap items-center justify-center flex-col lg:flex-row relative">
+
 {/* Responsive layout wrapper for text and image */}
       <div className="flex flex-col lg:flex-row items-center justify-center w-full gap-5 px-4 lg:px-10">
         

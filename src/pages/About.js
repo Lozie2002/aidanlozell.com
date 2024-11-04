@@ -18,7 +18,7 @@ function About() {
   const [toolstackRef, toolstackInView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <div className="bg-white min-h-screen p-6">
+    <div className="bg-gradient-to-r from-customColor to-blue-200 min-h-screen p-0">
       {/* WhoIM Section */}
       <motion.div
         ref={whoIMRef}

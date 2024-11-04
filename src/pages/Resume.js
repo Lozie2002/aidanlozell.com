@@ -27,7 +27,7 @@ function Resume() {
 
   return (
     <div
-      className="flex items-center justify-center flex-col relative bg-customColor"
+      className="flex items-center justify-center flex-col relative bg-gradient-to-r from-customColor to-blue-200"
       style={{
        
         minHeight: "100vh", // Ensure it covers the full viewport height

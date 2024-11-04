@@ -29,7 +29,7 @@ function WhoIM() {
       </div>
 
       {/* Right Section: Image */}
-      <div className="w-full lg:w-1/2 h-auto lg:h-full flex items-center justify-center z-20">
+      <div className="w-full lg:w-1/2 h-auto lg:h-full flex items-center justify-center z-20 py-10">
         <img
           src={aidan1}
           alt="Aidan Lozell"

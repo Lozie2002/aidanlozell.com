@@ -47,7 +47,7 @@ function Header() {
           <li className="relative group">
             <Link
               to="/"
-              className="flex gap-1 items-center justify-center cursor-pointer text-base lg:text-lg font-semibold relative before:absolute before:rounded-md before:left-0 before:-bottom-1 before:w-0 transition-all before:duration-200 before:h-[4px] before:bg-purple-500 group-hover:before:w-full"
+              className="flex gap-1 items-center justify-center cursor-pointer text-base lg:text-lg font-semibold relative before:absolute before:rounded-md before:left-0 before:-bottom-1 before:w-0 transition-all before:duration-200 before:h-[4px] before:bg-customColor group-hover:before:w-full"
             >
               <AiOutlineHome fontSize={20} />
               <span>Home</span>
@@ -56,7 +56,7 @@ function Header() {
           <li className="relative group">
             <Link
               to="/about"
-              className="flex gap-1 items-center justify-center cursor-pointer text-base lg:text-lg font-semibold relative before:absolute before:rounded-md before:left-0 before:-bottom-1 before:w-0 transition-all before:duration-200 before:h-[4px] before:bg-purple-500 group-hover:before:w-full"
+              className="flex gap-1 items-center justify-center cursor-pointer text-base lg:text-lg font-semibold relative before:absolute before:rounded-md before:left-0 before:-bottom-1 before:w-0 transition-all before:duration-200 before:h-[4px] before:bg-customColor group-hover:before:w-full"
             >
               <FiUser fontSize={20} />
               <span>About</span>
@@ -65,7 +65,7 @@ function Header() {
           <li className="relative group">
             <Link
               to="/experience"
-              className="flex gap-1 items-center justify-center cursor-pointer text-base lg:text-lg font-semibold relative before:absolute before:rounded-md before:left-0 before:-bottom-1 before:w-0 transition-all before:duration-200 before:h-[4px] before:bg-purple-500 group-hover:before:w-full"
+              className="flex gap-1 items-center justify-center cursor-pointer text-base lg:text-lg font-semibold relative before:absolute before:rounded-md before:left-0 before:-bottom-1 before:w-0 transition-all before:duration-200 before:h-[4px] before:bg-customColor group-hover:before:w-full"
             >
               <FiUser fontSize={20} />
               <span>Experience</span>
@@ -74,7 +74,7 @@ function Header() {
           <li className="relative group">
             <Link
               to="/projects"
-              className="flex gap-1 items-center justify-center cursor-pointer text-base lg:text-lg font-semibold relative before:absolute before:rounded-md before:left-0 before:-bottom-1 before:w-0 transition-all before:duration-200 before:h-[4px] before:bg-purple-500 group-hover:before:w-full"
+              className="flex gap-1 items-center justify-center cursor-pointer text-base lg:text-lg font-semibold relative before:absolute before:rounded-md before:left-0 before:-bottom-1 before:w-0 transition-all before:duration-200 before:h-[4px] before:bg-customColor group-hover:before:w-full"
             >
               <AiOutlineFundProjectionScreen fontSize={20} />
               <span>Projects</span>
@@ -83,7 +83,7 @@ function Header() {
           <li className="relative group">
             <Link
               to="/resume"
-              className="flex gap-1 items-center justify-center cursor-pointer text-base lg:text-lg font-semibold relative before:absolute before:rounded-md before:left-0 before:-bottom-1 before:w-0 transition-all before:duration-200 before:h-[4px] before:bg-purple-500 group-hover:before:w-full"
+              className="flex gap-1 items-center justify-center cursor-pointer text-base lg:text-lg font-semibold relative before:absolute before:rounded-md before:left-0 before:-bottom-1 before:w-0 transition-all before:duration-200 before:h-[4px] before:bg-customColor group-hover:before:w-full"
             >
               <FiFileText fontSize={20} />
               <span>Resume</span>
@@ -92,7 +92,7 @@ function Header() {
           <li className="relative group">
             <Link
               to="/contact"
-              className="flex gap-1 items-center justify-center cursor-pointer text-base lg:text-lg font-semibold relative before:absolute before:rounded-md before:left-0 before:-bottom-1 before:w-0 transition-all before:duration-200 before:h-[4px] before:bg-purple-500 group-hover:before:w-full"
+              className="flex gap-1 items-center justify-center cursor-pointer text-base lg:text-lg font-semibold relative before:absolute before:rounded-md before:left-0 before:-bottom-1 before:w-0 transition-all before:duration-200 before:h-[4px] before:bg-customColor group-hover:before:w-full"
             >
               <FiMail fontSize={20} /> {/* Changed icon to FiMail */}
               <span>Contact</span>

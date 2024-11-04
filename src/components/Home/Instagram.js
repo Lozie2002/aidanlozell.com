@@ -34,7 +34,7 @@ function Introduction() {
   }, []);
 
   return (
-    <div className="bg-customColor flex flex-col lg:flex-row items-start justify-center relative overflow-hidden p-4">
+    <div className="bg-gradient-to-r from-customColor to-blue-200 flex flex-col lg:flex-row items-start justify-center relative overflow-hidden p-4">
       {/* Text Section */}
       <div className="w-full lg:w-1/2 flex flex-col items-start justify-center my-5 lg:gap-10">
         <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-tight mb-6">
