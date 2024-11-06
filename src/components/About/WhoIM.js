@@ -3,12 +3,12 @@ import aidan1 from "../../photos/aidan1.jpg";
 
 function WhoIM() {
   return (
-    <div className="bg-white h-auto lg:h-[70vh] flex flex-wrap items-center justify-center flex-col lg:flex-row relative">
+    <div className="bg-white min-h-[70vh] flex flex-wrap items-center justify-center flex-col lg:flex-row relative mb-10 px-4 lg:px-10 overflow-hidden">
       {/* Left Section: Text Content */}
-      <div className="w-full lg:w-1/2 h-auto lg:h-full flex items-center justify-center flex-col my-10 lg:gap-10 px-5 lg:px-0 z-20">
-        <div className="flex items-center m-auto justify-center w-full lg:w-4/5">
+      <div className="w-full lg:w-1/2 flex items-center justify-center flex-col my-6 lg:gap-10 px-5 lg:px-8 z-20">
+        <div className="flex items-center justify-center w-full lg:w-4/5">
           <div className="flex flex-col gap-4 text-black text-base font-normal lg:text-lg">
-            <h1 className="text-5xl lg:text-7xl font-extrabold text-customColor leading-tight"> {/* Increased font size and weight */}
+            <h1 className="text-4xl lg:text-6xl font-extrabold text-customColor leading-tight"> {/* Adjusted font size */}
               More About Me
             </h1>
             <p className="mt-3 text-start text-lg lg:text-xl leading-relaxed tracking-wide">
@@ -29,7 +29,7 @@ function WhoIM() {
       </div>
 
       {/* Right Section: Image */}
-      <div className="w-full lg:w-1/2 h-auto lg:h-full flex items-center justify-center z-20 py-10">
+      <div className="w-full lg:w-1/2 flex items-center justify-center z-20 py-6">
         <img
           src={aidan1}
           alt="Aidan Lozell"

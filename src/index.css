@@ -27,3 +27,21 @@ body {
 .some-class {
   cursor: pointer; /* For clickable elements */
 }
+/* Add this to your CSS file (e.g., App.css or index.css) */
+/* Add this to your CSS file (e.g., App.css or index.css) */
+/* Add this to your global CSS file (index.css or App.css) */
+@keyframes coinTurn {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.hover\:coin-turn:hover {
+  animation: coinTurn 2s ease-in-out;
+}
