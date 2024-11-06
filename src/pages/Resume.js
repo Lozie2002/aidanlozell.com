@@ -50,13 +50,13 @@ function Resume() {
 
       {/* Animated PDF Document */}
       <motion.div
-        className="py-12 justify-center flex items-center overflow-hidden z-20 shadow-2xl rounded-lg" // Added more shadow and rounded corners
+        className="py-12 justify-center flex items-center overflow-hidden z-20 rounded-lg" // Added more shadow and rounded corners
         initial="initial"
         animate="animate"
         variants={slideIn}
         transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
       >
-        <Document file={resumeFile} className="flex justify-center shadow-xl rounded-lg">
+        <Document file={resumeFile} className="flex justify-center rounded-lg">
           <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
         </Document>
       </motion.div>
