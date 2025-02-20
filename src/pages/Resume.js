@@ -29,7 +29,6 @@ function Resume() {
     <div
       className="flex items-center justify-center flex-col relative bg-gradient-to-r from-customColor to-blue-200"
       style={{
-       
         minHeight: "100vh", // Ensure it covers the full viewport height
       }}
     >
@@ -38,26 +37,27 @@ function Resume() {
         href={resumeFile}
         target="_blank"
         rel="noreferrer"
-        className="flex items-center z-20 justify-center gap-3 px-8 py-3 rounded shadow-lg hover:shadow-xl text-black bg-white hover:bg-green transition duration-300 ease-in-out my-6 text-lg font-semibold" // Increased shadow effect on hover
+        className="flex items-center z-20 justify-center gap-3 px-8 py-3 rounded shadow-lg hover:shadow-xl text-black bg-white hover:bg-green transition duration-300 ease-in-out my-6 text-lg font-semibold"
         initial="initial"
         animate="animate"
         variants={fadeIn}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <BiDownload fontSize={24} /> {/* Increased icon size */}
+        <BiDownload fontSize={24} />
         Download CV
       </motion.a>
 
       {/* Animated PDF Document */}
       <motion.div
-        className="py-12 justify-center flex items-center overflow-hidden z-20 rounded-lg" // Added more shadow and rounded corners
+        className="py-12 flex flex-col items-center overflow-hidden z-20 rounded-lg gap-6" // flex-col for vertical layout + gap between pages
         initial="initial"
         animate="animate"
         variants={slideIn}
         transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
       >
-        <Document file={resumeFile} className="flex justify-center rounded-lg">
+        <Document file={resumeFile} className="flex flex-col items-center rounded-lg">
           <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
+          <Page pageNumber={2} scale={width > 786 ? 1.7 : 0.6} />
         </Document>
       </motion.div>
     </div>

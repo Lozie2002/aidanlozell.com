@@ -8,6 +8,7 @@ import Experience from "./pages/Experience";
 import Header from "./components/Extras/Header";
 import Footer from "./components/Extras/Footer";
 import Contact from "./pages/Contact";
+import Certification from "./pages/Certifications";
 import ScrollToTop from "./components/Extras/ScrollToTop";
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/resume" element={<Resume />} />
         <Route path="/experience" element={<Experience/> }/>
         <Route path="/contact" element={<Contact />} />
+        <Route path="/certification" element={<Certification />} />
         <Route path="*" element={<Home />} />
       </Routes>
       <Footer />

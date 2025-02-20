@@ -1,6 +1,6 @@
 import React from "react";
 import { AiOutlineHome, AiOutlineFundProjectionScreen, AiOutlineClose } from "react-icons/ai";
-import { FiUser, FiFileText } from "react-icons/fi";
+import { FiUser, FiFileText, FiMail } from "react-icons/fi";
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa"; // Import social icons
 import { Link } from "react-router-dom";
 
@@ -60,6 +60,16 @@ function MobileNav({ showNav, setShowNav }) {
           </li>
           <li className="w-full border-b border-white">
             <Link
+               to="/certification"
+              className="flex gap-4 items-center pl-6 py-3 text-base font-semibold hover:bg-gray-700 hover:text-white transition-colors rounded-r-md"
+              onClick={() => setShowNav(false)}
+            >
+              <AiOutlineFundProjectionScreen fontSize={20} />
+              <span>Certifications</span>
+            </Link>
+          </li>
+          <li className="w-full border-b border-white">
+            <Link
               to="/projects"
               className="flex gap-4 items-center pl-6 py-3 text-base font-semibold hover:bg-gray-700 hover:text-white transition-colors rounded-r-md"
               onClick={() => setShowNav(false)}
@@ -84,7 +94,7 @@ function MobileNav({ showNav, setShowNav }) {
               className="flex gap-4 items-center pl-6 py-3 text-base font-semibold hover:bg-gray-700 hover:text-white transition-colors rounded-r-md"
               onClick={() => setShowNav(false)}
             >
-              <FiFileText fontSize={20} />
+              <FiMail fontSize={20} />
               <span>Contact</span>
             </Link>
           </li>

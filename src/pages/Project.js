@@ -2,6 +2,12 @@ import React from "react";
 import ProjectCard from "../components/Project/ProjectCard";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+
+import Java from "../photos/ProjectPhotos/Java.png";
+import AppDevelopment from "../photos/ProjectPhotos/FlutterLogo.jpg";
+import StPhilsLogo from "../photos/ProjectPhotos/StPhilsLogo.png";
+import L4F from "../photos/ProjectPhotos/LF4.webp";
+import LushExt from "../photos/ProjectPhotos/LushCleaningLogo.png";
 import logo1 from "../photos/logo.png";
 
 function Project() {
@@ -13,64 +19,70 @@ function Project() {
   const [projectInView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <div className="bg-white flex flex-col items-center justify-center relative overflow-hidden px-10 py-8">
-      <h1 className="text-5xl lg:text-7xl font-extrabold text-customColor leading-tight mb-4 text-left">
+    <div className="bg-white flex flex-col items-center justify-center relative overflow-hidden px-6 py-12">
+      <h1 className="text-5xl lg:text-7xl font-extrabold text-customColor leading-tight mb-6 text-center">
         My Projects
       </h1>
 
-      {/* Paragraph under the h1 */}
-      <p className="text-lg text-black mb-6 text-left max-w-3xl">
-        Here is a selection of my projects that showcase my skills in web development. Each project demonstrates my ability to create responsive, user-friendly applications using modern technologies.
+      <p className="text-lg text-black mb-10 text-center max-w-4xl">
+        A showcase of my projects highlighting my web development skills. Each
+        project demonstrates my ability to create responsive, user-friendly
+        applications using modern technologies.
       </p>
 
-      <div className="z-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+      <div className="z-20 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-12 mt-6 w-full max-w-7xl">
         {[
           {
             name: "React Portfolio Website",
             image: logo1,
-            about: "A personal portfolio website built with React, showcasing various projects and skills.",
+            about:
+              "A personal portfolio website built with React, showcasing various projects and skills.",
             demo: "https://blog-website-riteshk-007.vercel.app/",
             code: "https://github.com/riteshk-007/blog-website",
             tags: ["React", "CSS", "JavaScript"],
           },
           {
             name: "LushExteriorCleaning.com",
-            image: logo1,
-            about: "A platform for exterior cleaning services, featuring an image gallery and service details.",
-            demo: "https://imagzen.vercel.app/",
-            code: "https://github.com/riteshk-007/imagzen",
+            image: LushExt,
+            about:
+              "A platform for exterior cleaning services, featuring an image gallery and service details.",
+            demo: "https://lushexteriorcleaning.com/",
+            code: "/project",
             tags: ["React", "Firebase", "CSS"],
           },
           {
-            name: "LearningForLifeDrivingSchool",
-            image: logo1,
-            about: "An e-commerce site for driving school services, integrating booking and payment functionalities.",
-            demo: "https://nextjs-e-commerce-rk.vercel.app/",
-            code: "https://github.com/riteshk-007/nextjs-store",
+            name: "LearningForLifeDriving",
+            image: L4F,
+            about:
+              "An e-commerce site for driving school services, integrating booking and payment functionalities.",
+            demo: "https://learning4lifedrivingschool.com.au/",
+            code: "/nextjs-store",
             tags: ["Next.js", "Redux", "JavaScript"],
           },
           {
-            name: "Java Based Games",
-            image: logo1,
-            about: "A collection of engaging games developed in Java, providing fun and entertainment.",
-            code: "https://github.com/riteshk-007/Chat-GPT-Clone",
+            name: "St Phils Anglican Church",
+            image: StPhilsLogo,
+            about:
+              "A website for a local church, providing information on services, events, and community activities.",
+            code: "https://stphils.org/",
             tags: ["Java", "Games", "OpenAI"],
           },
           {
             name: "App Development",
-            image: logo1,
-            about: "A versatile web application for managing workout routines, progress tracking, and performance analytics.",
+            image: AppDevelopment,
+            about:
+              "Various applications developed to practice implementing diverse features. Projects include a Church App, Fuel Economy App, Dating App, and more.",
             demo: "https://gym-exercise-six.vercel.app/",
             code: "https://github.com/riteshk-007/gym-exercise",
             tags: ["React", "Express", "MongoDB"],
           },
           {
-            name: "Arcade Machine",
-            image: logo1,
-            about: "An online arcade platform where users can play classic games and share their scores with friends.",
-            demo: "https://youtube-clone-by-ritesh.netlify.app/",
-            code: "https://github.com/riteshk-007/Youtube-Clone-by-Tailwind-Css",
-            tags: ["React", "Node.js", "CSS"],
+            name: "Java Based Games",
+            image: Java,
+            about:
+              "A collection of engaging games developed in Java, providing fun and entertainment.",
+            code: "https://github.com/riteshk-007/Chat-GPT-Clone",
+            tags: ["Java", "Games", "OpenAI"],
           },
         ].map((project, index) => (
           <motion.div
@@ -88,7 +100,7 @@ function Project() {
               demo={project.demo}
               code={project.code}
               tags={project.tags}
-              demoText="See More" // Change demo text to "See More"
+              demoText="See More"
               className="font-sans"
             />
           </motion.div>

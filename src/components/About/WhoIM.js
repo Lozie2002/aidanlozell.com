@@ -11,8 +11,8 @@ function WhoIM() {
             <h1 className="text-4xl lg:text-6xl font-extrabold text-customColor leading-tight"> {/* Adjusted font size */}
               More About Me
             </h1>
-            <p className="mt-3 text-start text-lg lg:text-xl leading-relaxed tracking-wide">
-              I’m Aidan Lozell, a recent graduate with a degree in Computer
+            <p className="text-gray-800 text-base sm:text-lg lg:text-xl font-light leading-relaxed text-left lg:pr-6 mt-4">
+            I’m Aidan Lozell, a recent graduate with a degree in Computer
               Science, majoring in Cyber Security. Throughout my studies, I built
               a strong foundation in areas like information security, threat
               analysis, and network protection. I’m passionate about safeguarding
